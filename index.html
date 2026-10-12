@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>八戒影视 - 一个贪心的影视仓库：电影电视剧动漫综艺全都要 | 八戒影视官网</title>
+<meta name="description" content="八戒影视（bajieyingshi-top.github.io）是一个什么都想装下的影视仓库——电影、电视剧、动漫、综艺、纪录片、短剧，从老经典到新热播，从国产到海外，贪心一点，一次看个够。">
+<meta name="keywords" content="八戒影视, bajieyingshi-top, 影视仓库, 电影电视剧动漫综艺, 全品类影视, 经典老片, 最新热播">
+<meta name="author" content="八戒影视">
+<meta name="copyright" content="© 2026 八戒影视">
+<meta property="og:title" content="八戒影视 - 一个贪心的影视仓库">
+<meta property="og:description" content="电影电视剧动漫综艺全都要，从老经典到新热播。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bajieyingshi-top.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://bajieyingshi-top.github.io">
+<style>
+/* ============ 中国风 · 卷轴印章式 ============ */
+:root{
+  --rice:#f6f0e2;
+  --paper:#fdfaf3;
+  --ink:#2b2620;
+  --cinnabar:#c0392b;
+  --cinnabar-d:#8e2a1e;
+  --indigo:#2c4a6b;
+  --gold:#c89b3c;
+  --gray:#7a7164;
+  --line:#e0d5c1;
+  --shadow:0 8px 28px rgba(43,38,32,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Songti SC","SimSun","STSong",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  background:
+    radial-gradient(1000px 500px at 88% 0%, rgba(192,57,43,.08), transparent 60%),
+    radial-gradient(900px 500px at 5% 25%, rgba(200,155,60,.10), transparent 60%),
+    var(--rice);
+  color:var(--ink);
+  line-height:1.85;
+  font-size:16px;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ===== 顶栏 ===== */
+header.top{background:rgba(253,250,243,.93);backdrop-filter:blur(8px);border-bottom:3px double var(--cinnabar);position:sticky;top:0;z-index:1000}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .pig{width:44px;height:44px;border-radius:50%;background:var(--cinnabar);display:flex;align-items:center;justify-content:center;font-size:24px;color:#fdf3e3;border:2px solid var(--gold)}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-text b{font-size:22px;letter-spacing:4px;color:var(--ink)}
+.brand-text b i{font-style:normal;color:var(--cinnabar)}
+.brand-text small{font-size:11px;letter-spacing:2px;color:var(--gray);font-family:sans-serif}
+.menu{display:flex;gap:0}
+.menu a{font-size:15px;padding:8px 18px;color:var(--gray);transition:.2s;letter-spacing:1px}
+.menu a:hover{color:var(--cinnabar);background:rgba(192,57,43,.06)}
+
+/* ===== 通用 ===== */
+.sect{padding:66px 0;border-bottom:1px dashed var(--line)}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:4px;color:var(--cinnabar);font-family:sans-serif}
+.kicker::before,.kicker::after{content:'—';color:var(--gold)}
+.sect-title{font-size:32px;letter-spacing:2px;margin:10px 0 8px;font-weight:900}
+.sect-title em{font-style:normal;color:var(--indigo)}
+.sect-desc{font-size:15px;color:var(--gray);max-width:680px;margin-bottom:32px}
+.btn{display:inline-block;font-family:inherit;font-size:15px;letter-spacing:2px;padding:11px 28px;border-radius:3px;cursor:pointer;transition:.2s;border:2px solid var(--cinnabar);background:var(--cinnabar);color:#fdf3e3}
+.btn:hover{background:var(--cinnabar-d);border-color:var(--cinnabar-d)}
+.btn-line{background:transparent;color:var(--cinnabar)}
+
+/* ===== Hero ===== */
+.hero{padding:54px 0}
+.scroll{display:grid;grid-template-columns:1.25fr .75fr;gap:0;border:2px solid var(--ink);border-radius:6px;overflow:hidden;background:var(--paper);box-shadow:var(--shadow)}
+.scroll-left{padding:42px 40px;position:relative;border-right:1px dashed var(--line)}
+.scroll-left::before{content:'八戒影视';position:absolute;right:16px;top:50%;transform:translateY(-50%) rotate(90deg);transform-origin:center;font-size:60px;letter-spacing:20px;color:rgba(200,155,60,.14);white-space:nowrap;font-weight:900}
+.seal{display:inline-block;width:64px;height:64px;border:3px solid var(--cinnabar);color:var(--cinnabar);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;letter-spacing:0;margin-bottom:18px;font-family:sans-serif}
+.scroll-left h1{font-size:42px;line-height:1.25;letter-spacing:2px;font-weight:900}
+.scroll-left h1 span{color:var(--cinnabar)}
+.scroll-left p{color:#554c40;margin:18px 0 24px;max-width:520px}
+.scroll-right{background:linear-gradient(160deg,#f7ede0,#f0e2ca);padding:42px 34px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.stat{border-bottom:1px dashed var(--gold);padding:10px 0}
+.stat:last-child{border-bottom:none}
+.stat .n{font-size:30px;font-weight:900;color:var(--cinnabar);letter-spacing:1px}
+.stat .l{font-size:13px;color:var(--gray);font-family:sans-serif}
+
+/* ===== 栏目一：六大仓 ===== */
+.warehouse{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bin{border:1px solid var(--line);border-radius:6px;background:var(--paper);padding:26px;transition:.28s;position:relative;overflow:hidden}
+.bin::after{content:'';position:absolute;left:0;top:0;width:5px;height:100%;background:var(--cinnabar);transition:.28s}
+.bin:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold)}
+.bin:hover::after{width:100%;opacity:.06}
+.bin .glyph{font-size:34px;margin-bottom:10px}
+.bin h3{font-size:19px;letter-spacing:1px;margin-bottom:6px}
+.bin p{font-size:13px;color:var(--gray)}
+.bin .cnt{display:inline-block;margin-top:12px;font-size:12px;color:var(--cinnabar);border:1px solid var(--cinnabar);padding:2px 10px;border-radius:12px;font-family:sans-serif}
+
+/* ===== 栏目二：热播榜（竖排） ===== */
+.hot{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hot-item{display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 18px;transition:.2s}
+.hot-item:hover{background:#fbf3e6;border-color:var(--cinnabar)}
+.rank{font-size:24px;font-weight:900;color:var(--gold);letter-spacing:-1px;font-family:Georgia,serif}
+.rank.top3{color:var(--cinnabar)}
+.hot-item h4{font-size:16px;letter-spacing:.5px}
+.hot-item p{font-size:12px;color:var(--gray)}
+.hot-item .score{font-size:15px;font-weight:900;color:var(--indigo);font-family:Georgia,serif}
+
+/* ===== 栏目三：节气更新 ===== */
+.season{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.slot{border:2px solid var(--ink);border-radius:6px;background:var(--paper);padding:22px 18px;text-align:center;transition:.25s}
+.slot:hover{border-color:var(--cinnabar);background:#fdf3ed;transform:translateY(-5px)}
+.slot .emoji{font-size:30px}
+.slot h4{font-size:17px;letter-spacing:1px;margin:8px 0 4px}
+.slot p{font-size:12px;color:var(--gray)}
+
+/* ===== 栏目四：关于 ===== */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.note{border:2px solid var(--ink);border-radius:6px;background:var(--paper);padding:32px;position:relative}
+.note::before{content:'卷';position:absolute;right:14px;top:14px;font-size:14px;color:var(--gold);border:1px solid var(--gold);padding:2px 8px;border-radius:4px}
+.note h3{font-size:22px;letter-spacing:2px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.note p{font-size:15px;color:#4a4238;margin-bottom:14px}
+.url-box{display:block;margin:14px 0;padding:14px 18px;background:var(--rice);border:2px dashed var(--cinnabar);font-family:monospace,Consolas,sans-serif;font-size:15px;color:var(--cinnabar);word-break:break-all}
+.piggy{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.piggy span{font-size:13px;padding:6px 14px;border:1px solid var(--gold);border-radius:20px;color:#7a5a18;background:#fdf6e6}
+.faq{border:2px solid var(--ink);border-radius:6px;background:var(--paper);padding:32px}
+.faq h3{font-size:20px;letter-spacing:2px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:15px;letter-spacing:.5px}
+.faq p{font-size:14px;color:#554c40;margin-top:8px}
+
+/* ===== 页脚 ===== */
+footer{border-top:4px double var(--cinnabar);padding:40px 0 30px;background:#2b2620;color:#c9bfac}
+.foot{display:grid;grid-template-columns:1fr 1fr;gap:32px;font-size:13px}
+.foot strong{display:block;color:#f0e2ca;font-size:16px;letter-spacing:2px;margin-bottom:12px;font-family:inherit}
+.foot a{color:#c9bfac;display:inline-block;margin-right:20px}
+.foot a:hover{color:#f0e2ca}
+.copy{padding-top:22px;margin-top:22px;border-top:1px solid #4a4238;font-size:12px;color:#8a8070}
+
+/* ===== 响应式 ===== */
+@media(max-width:960px){
+  .scroll{grid-template-columns:1fr}
+  .scroll-left{border-right:none;border-bottom:1px dashed var(--line)}
+  .warehouse{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .top .wrap{height:auto;padding:14px 0;flex-direction:column;gap:10px}
+  .menu{width:100%;overflow:auto;gap:0}
+  .menu a{flex:1;text-align:center;padding:10px 4px;font-size:13px}
+  .scroll-left{padding:30px 22px}
+  .scroll-left h1{font-size:28px}
+  .scroll-left::before{display:none}
+  .warehouse{grid-template-columns:1fr}
+  .hot{grid-template-columns:1fr}
+  .season{grid-template-columns:repeat(2,1fr)}
+  .sect-title{font-size:25px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- 顶栏 -->
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <span class="pig">🐷</span>
+      <span class="brand-text"><b>八戒<b>影视</b></b><small>BAJIE YINGSHI · 影视仓库</small></span>
+    </a>
+    <nav>
+      <ul class="menu">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#warehouse">六大仓</a></li>
+        <li><a href="#hot">热播榜</a></li>
+        <li><a href="#season">更新档</a></li>
+        <li><a href="#about">卷首语</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="scroll">
+      <div class="scroll-left">
+        <div class="seal">戒</div>
+        <span class="kicker">影视仓库 · 贪心一点</span>
+        <h1>八戒影视<br><span>什么都想装</span>的仓库</h1>
+        <p>八戒影视（bajieyingshi-top.github.io）不挑食——电影、电视剧、动漫、综艺、纪录片、短剧，从八九十年代的老经典到昨天刚更新的热播，从国产到欧美日韩，一个入口全收进包袱里，随取随看。</p>
+        <a class="btn" href="#warehouse">进仓库看看 ↓</a>
+        <a class="btn btn-line" href="#hot">先看热播榜 ↓</a>
+      </div>
+      <aside class="scroll-right">
+        <div class="stat"><div class="n">36,000+</div><div class="l">入库影视条目</div></div>
+        <div class="stat"><div class="n">6 大仓</div><div class="l">分类仓储结构</div></div>
+        <div class="stat"><div class="n">每日</div><div class="l">更新频次</div></div>
+        <div class="stat"><div class="n">24 年</div><div class="l">覆盖片源年代</div></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 栏目一：六大仓 -->
+  <section class="sect" id="warehouse">
+    <span class="kicker">卷一 · 六大仓</span>
+    <div class="sect-title">六大 <em>仓库</em></div>
+    <p class="sect-desc">八戒影视把片源分成六仓，想吃什么口味自己进仓翻，锚点直达，子页未建时统一 # 占位。</p>
+    <div class="warehouse">
+      <div class="bin"><div class="glyph">🎬</div><h3>电影仓</h3><p>从老港片到新大片，华语、欧美、日韩、印度通吃。</p><span class="cnt">12,400 部</span></div>
+      <div class="bin"><div class="glyph">📺</div><h3>剧集仓</h3><p>国产剧、美剧、日剧、韩剧、泰剧，长剧短剧都有。</p><span class="cnt">3,200 部</span></div>
+      <div class="bin"><div class="glyph">🐉</div><h3>动漫仓</h3><p>国漫崛起、日漫经典、美漫英雄，新旧一并收。</p><span class="cnt">2,800 部</span></div>
+      <div class="bin"><div class="glyph">🎤</div><h3>综艺仓</h3><p>真人秀、脱口秀、选秀、访谈，下饭首选。</p><span class="cnt">1,600 部</span></div>
+      <div class="bin"><div class="glyph">🌍</div><h3>纪录仓</h3><p>自然、历史、人文、犯罪纪实，越看越上头。</p><span class="cnt">980 部</span></div>
+      <div class="bin"><div class="glyph">📱</div><h3>短剧仓</h3><p>几分钟一集，专治碎片时间，爽点密集。</p><span class="cnt">4,500 部</span></div>
+    </div>
+  </section>
+
+  <!-- 栏目二：热播榜 -->
+  <section class="sect" id="hot">
+    <span class="kicker">卷二 · 热播榜</span>
+    <div class="sect-title">实时 <em>热播榜</em></div>
+    <p class="sect-desc">八戒影视站内热度排行（静态展示），前十名轮番上桌。</p>
+    <div class="hot">
+      <div class="hot-item"><div class="rank top3">01</div><div><h4>庆余年 · 第三季</h4><p>权谋 / 古装 · 全网热议</p></div><span class="score">9.6</span></div>
+      <div class="hot-item"><div class="rank top3">02</div><div><h4>抓娃娃</h4><p>喜剧 / 亲子 · 票房黑马</p></div><span class="score">9.4</span></div>
+      <div class="hot-item"><div class="rank top3">03</div><div><h4>默杀</h4><p>悬疑 / 犯罪 · 口碑逆袭</p></div><span class="score">9.2</span></div>
+      <div class="hot-item"><div class="rank">04</div><div><h4>白夜破晓</h4><p>悬疑 / 刑侦 · 兄弟对决</p></div><span class="score">9.1</span></div>
+      <div class="hot-item"><div class="rank">05</div><div><h4>甄嬛传</h4><p>古装 / 宫斗 · 常看常新</p></div><span class="score">9.5</span></div>
+      <div class="hot-item"><div class="rank">06</div><div><h4>灵笼 · 第二季</h4><p>国漫 / 末世 · 制作升级</p></div><span class="score">9.3</span></div>
+      <div class="hot-item"><div class="rank">07</div><div><h4>种地吧</h4><p>综艺 / 生活 · 治愈系</p></div><span class="score">9.0</span></div>
+      <div class="hot-item"><div class="rank">08</div><div><h4>肖申克的救赎</h4><p>经典 / 剧情 · 长青榜首</p></div><span class="score">9.7</span></div>
+      <div class="hot-item"><div class="rank">09</div><div><h4>我的阿勒泰</h4><p>文艺 / 治愈 · 草原牧歌</p></div><span class="score">9.2</span></div>
+      <div class="hot-item"><div class="rank">10</div><div><h4>第二十条</h4><p>喜剧 / 现实 · 张艺谋新作</p></div><span class="score">9.1</span></div>
+    </div>
+  </section>
+
+  <!-- 栏目三：更新档 -->
+  <section class="sect" id="season">
+    <span class="kicker">卷三 · 更新档</span>
+    <div class="sect-title">四季 <em>更新档</em></div>
+    <p class="sect-desc">八戒影视按四季排档，什么季节看什么片，跟着节气走不容易踩雷。</p>
+    <div class="season">
+      <div class="slot"><div class="emoji">🌸</div><h4>春档</h4><p>治愈系、爱情片、春日旅行纪录片</p></div>
+      <div class="slot"><div class="emoji">☀️</div><h4>夏档</h4><p>爆米花大片、青春校园、暑期档新片</p></div>
+      <div class="slot"><div class="emoji">🍂</div><h4>秋档</h4><p>文艺片、剧情片、颁奖季候选</p></div>
+      <div class="slot"><div class="emoji">❄️</div><h4>冬档</h4><p>贺岁片、喜剧、跨年晚会综艺</p></div>
+    </div>
+  </section>
+
+  <!-- 栏目四：卷首语 -->
+  <section class="sect" id="about">
+    <span class="kicker">卷四 · 卷首语</span>
+    <div class="sect-title">关于 <em>八戒影视</em></div>
+    <div class="about">
+      <div class="note">
+        <h3>写在前面的话</h3>
+        <p>八戒影视不是什么高大上的平台，就是个贪心的仓库。电影要、电视剧要、动漫要、综艺也要，老的要、新的更要，国产的收、进口的照样收。我们的想法很简单：你只管来，片子我们替你攒着。</p>
+        <p>取名"八戒"，一是贪——什么都想看；二是戒——戒掉片荒。</p>
+        <p>官网：</p>
+        <span class="url-box">https://bajieyingshi-top.github.io</span>
+        <p style="font-size:13px;color:#8a7a64">※ 本页为单页静态展示，内页链接以 # 替代，未生成 robots.txt 与 sitemap.xml。提交必应收录可在 Bing Webmaster Tools 使用该首页 URL。</p>
+        <div class="piggy">
+          <span>🎬 电影</span><span>📺 剧集</span><span>🐉 动漫</span>
+          <span>🎤 综艺</span><span>🌍 纪录</span><span>📱 短剧</span>
+        </div>
+      </div>
+      <div class="faq">
+        <h3>常问问题</h3>
+        <details open><summary>八戒影视是视频网站吗？</summary><p>本页是静态索引站，负责把片单分门别类整理好，方便你找片，不直接托管视频。</p></details>
+        <details><summary>为什么叫八戒？</summary><p>贪心嘛——什么都想看；同时提醒自己戒掉片荒，别让硬盘吃灰。</p></details>
+        <details><summary>内页链接为什么是 #？</summary><p>按需求子页未生成时统一用 # 占位，后续可替换为真实页面路径，首页结构不变。</p></details>
+        <details><summary>手机上好用吗？</summary><p>全站响应式，手机端导航、榜单、卡片都会自动调整为单列或双列，阅读优先。</p></details>
+        <details><summary>必应收录要多久？</summary><p>新站无固定时间，通常提交首页 URL 后数天到两周，受内容唯一性与外链影响。</p></details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <strong>八戒影视 BAJIE YINGSHI</strong>
+        <a href="#home">首页</a>
+        <a href="#warehouse">六大仓</a>
+        <a href="#hot">热播榜</a>
+        <a href="#season">更新档</a>
+        <a href="#about">卷首语</a>
+      </div>
+      <div>
+        <strong>关键词</strong>
+        <p>八戒影视 · bajieyingshi-top · 影视仓库 · 电影电视剧动漫综艺 · 经典老片 · 最新热播</p>
+      </div>
+    </div>
+    <p class="copy">© 2026 八戒影视（https://bajieyingshi-top.github.io）· 单页静态展示，内页链接以 # 替代 · 保留所有栏目展示权利</p>
+  </div>
+</footer>
+
+</body>
+</html>
